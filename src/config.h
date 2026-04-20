@@ -1,0 +1,22 @@
+#define WIFI_SSID "SSID_NOME_WIFI"
+#define WIFI_PASSWORD "PASSWORD_WIFI"
+#define AWS_ENDPOINT "ENDPOINT_AWS"
+#define CLIENT_ID "ID_DEL_THING"
+#define AWS_PORT 8883
+static const char rootCA[] PROGMEM = R"EOF(
+-----BEGIN CERTIFICATE-----
+CERTIFICATO
+-----END CERTIFICATE-----
+)EOF";
+
+static const char deviceCert[] PROGMEM = R"KEY(
+-----BEGIN CERTIFICATE-----
+CERTIFICATO
+-----END CERTIFICATE-----
+)KEY";
+
+static const char privateKey[] PROGMEM = R"KEY(
+-----BEGIN RSA PRIVATE KEY-----
+CHIAVE_PRIVATA
+-----END RSA PRIVATE KEY-----
+)KEY";
