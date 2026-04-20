@@ -1,0 +1,1066 @@
+
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Telegram Bot",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1574fed41230656a",
+        "type": "tab",
+        "label": "Simulatore",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "56a2db7cadb3baf8",
+        "type": "tab",
+        "label": "Soglie e Intervalli",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "27aaede8fe1ea182",
+        "type": "tab",
+        "label": "Aggiunta Sensori",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a7f88f28765d858d",
+        "type": "telegram bot",
+        "botname": "quake_alarm_bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "2db7d68e5e80919e",
+        "type": "tls-config",
+        "name": "asset1certs",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "ff92ddf2e6ec04ac9c589cedaf2da75ea8a5a434d199a2edff21a37caec60a42-certificate.pem.crt",
+        "keyname": "ff92ddf2e6ec04ac9c589cedaf2da75ea8a5a434d199a2edff21a37caec60a42-private.pem.key",
+        "caname": "AmazonRootCA1.pem",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "75030c79bef71eef",
+        "type": "mqtt-broker",
+        "name": "AWS_IOT",
+        "broker": "a3ese9zmpahawb-ats.iot.eu-north-1.amazonaws.com",
+        "port": "8883",
+        "tls": "2db7d68e5e80919e",
+        "clientid": "NodeRED_Manager",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": false,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "759a448185a4a9f3",
+        "type": "ui_tab",
+        "name": "Configurazione",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "aef9b35344b78410",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "8fb6dd55913dfc13",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "759a448185a4a9f3",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "248f7365385197d6",
+        "type": "ui_tab",
+        "name": "Nuovo Sensore",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b7cbb33a214d872e",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "248f7365385197d6",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9ecdcf2e69dfd39e",
+        "type": "amazon config",
+        "name": "AWS",
+        "region": "eu-north-1",
+        "proxyRequired": false,
+        "proxy": ""
+    },
+    {
+        "id": "2adff4cffad617af",
+        "type": "telegram sender",
+        "z": "f6f2187d.f17ca8",
+        "name": "quake_alarm_bot",
+        "bot": "a7f88f28765d858d",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 670,
+        "y": 200,
+        "wires": [
+            [
+                "9af31e2cad0cd13a"
+            ]
+        ]
+    },
+    {
+        "id": "02bf702716a00882",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"chatId\":-1003873657111,\"type\":\"message\",\"content\":\"Allarme terremoto\"}",
+        "payloadType": "json",
+        "x": 430,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9af31e2cad0cd13a",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "676f4260806a135b",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "allarmi",
+        "func": "var area = msg.payload.area;\nvar testo = \"⚠️ ALLARME SISMA! ⚠️\\n\" + msg.payload.msg;\n\nmsg.payload = {\n    chatId: -1003873657111, \n    type: 'message',\n    content: testo\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "2adff4cffad617af"
+            ]
+        ]
+    },
+    {
+        "id": "c59f12c10b7ea165",
+        "type": "telegram receiver",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "bot": "a7f88f28765d858d",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "hasinput": false,
+        "inputs": 0,
+        "handleallupdates": false,
+        "x": 670,
+        "y": 100,
+        "wires": [
+            [
+                "535c5db3df4cb19c"
+            ],
+            [
+                "535c5db3df4cb19c"
+            ]
+        ]
+    },
+    {
+        "id": "535c5db3df4cb19c",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "85437c4b404bcdb9",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "AWS_IOT",
+        "topic": "alarms/notifications",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "75030c79bef71eef",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 200,
+        "wires": [
+            [
+                "676f4260806a135b",
+                "7ef4f289cdce3048"
+            ]
+        ]
+    },
+    {
+        "id": "7ef4f289cdce3048",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3037a07c1fd46111",
+        "type": "function",
+        "z": "1574fed41230656a",
+        "name": "simulaSisma",
+        "func": "// Recuperiamo il nome del sismografo dal nodo Inject\nconst deviceID = msg.payload;\n\n// Verifichiamo che il payload non sia vuoto\nif (!deviceID || typeof deviceID !== 'string') {\n    node.error(\"Errore: Il nodo Inject deve inviare il nome del sismografo come stringa!\");\n    return null;\n}\n\n// Simuliamo la raffica di tilt (10 messaggi, uno ogni 500ms)\nfor (let i = 0; i < 10; i++) {\n    setTimeout(() => {\n        // Costruiamo il payload per AWS\n        let simulatedPayload = {\n            \"deviceId\": deviceID,\n            \"timestamp\": Math.floor(Date.now() / 1000)\n        };\n\n        // Costruiamo il topic dinamico: devices/NOME_SISMOGRAFO/tilt\n        let topicDinamico = \"devices/\" + deviceID + \"/tilt\";\n\n        // Inviamo il messaggio al nodo MQTT Out\n        node.send({\n            topic: topicDinamico,\n            payload: simulatedPayload\n        });\n\n    }, i * 500);\n}\n\n// Log di controllo nel debug di Node-RED\nnode.warn(\"Simulazione avviata per il dispositivo: \" + deviceID);\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "e97dbe56263fbf32"
+            ]
+        ]
+    },
+    {
+        "id": "8f08f7673b01df02",
+        "type": "inject",
+        "z": "1574fed41230656a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "sismografo_gabriele",
+        "payloadType": "str",
+        "x": 190,
+        "y": 160,
+        "wires": [
+            [
+                "3037a07c1fd46111"
+            ]
+        ]
+    },
+    {
+        "id": "e97dbe56263fbf32",
+        "type": "mqtt out",
+        "z": "1574fed41230656a",
+        "name": "",
+        "topic": "",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "75030c79bef71eef",
+        "x": 590,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "514c72145e5eb861",
+        "type": "inject",
+        "z": "1574fed41230656a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "sismografo_fabio",
+        "payloadType": "str",
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "3037a07c1fd46111"
+            ]
+        ]
+    },
+    {
+        "id": "225b3efe9df7bb84",
+        "type": "ui_numeric",
+        "z": "56a2db7cadb3baf8",
+        "name": "",
+        "label": "Finestra Tempo (sec)",
+        "tooltip": "",
+        "group": "8fb6dd55913dfc13",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "60",
+        "step": 1,
+        "className": "",
+        "x": 160,
+        "y": 180,
+        "wires": [
+            [
+                "2bedd20f32a79b05"
+            ]
+        ]
+    },
+    {
+        "id": "2b9f43642a883a29",
+        "type": "ui_numeric",
+        "z": "56a2db7cadb3baf8",
+        "name": "",
+        "label": "Intervallo 1",
+        "tooltip": "",
+        "group": "8fb6dd55913dfc13",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "1fe433c8d06853a4"
+            ]
+        ]
+    },
+    {
+        "id": "19b4c2f36b6467f3",
+        "type": "ui_numeric",
+        "z": "56a2db7cadb3baf8",
+        "name": "",
+        "label": "Intervallo 3",
+        "tooltip": "",
+        "group": "8fb6dd55913dfc13",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "2509a81a4893fc09"
+            ]
+        ]
+    },
+    {
+        "id": "044a841be37b6a66",
+        "type": "ui_numeric",
+        "z": "56a2db7cadb3baf8",
+        "name": "",
+        "label": "Intervallo 2",
+        "tooltip": "",
+        "group": "8fb6dd55913dfc13",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "369e69148c2a6863"
+            ]
+        ]
+    },
+    {
+        "id": "80795e2d3125eaee",
+        "type": "ui_button",
+        "z": "56a2db7cadb3baf8",
+        "name": "",
+        "group": "8fb6dd55913dfc13",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Salva Configurazione",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 460,
+        "wires": [
+            [
+                "d84d793c56f8baf7"
+            ]
+        ]
+    },
+    {
+        "id": "d84d793c56f8baf7",
+        "type": "function",
+        "z": "56a2db7cadb3baf8",
+        "name": "function 1",
+        "func": "// Recupera i dati dal flow context\nvar areaId = flow.get(\"areaId\") || \"GLOBAL\";\nvar threshold = flow.get(\"tiltThreshold\") || 5;\nvar window = flow.get(\"timeWindow\") || 10;\nvar h1 = flow.get(\"int1\") || 1;\nvar h2 = flow.get(\"int2\") || 12;\nvar h3 = flow.get(\"int3\") || 24;\n\nmsg.Item = {\n        \"areaId\": { \"S\": String(areaId) },\n        // NOTA: Usa \"N\" per i numeri, ma passali come stringhe. \n        // DynamoDB vuole così per il tipo Number.\n        \"tiltThreshold\": { \"N\": String(threshold) },\n        \"timeWindow\":    { \"N\": String(window) },\n        \"int1\":          { \"N\": String(h1) },\n        \"int2\":          { \"N\": String(h2) },\n        \"int3\":          { \"N\": String(h3) }\n    \n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 460,
+        "wires": [
+            [
+                "833421ce6c1f102d"
+            ]
+        ]
+    },
+    {
+        "id": "833421ce6c1f102d",
+        "type": "AWS DynamoDB",
+        "z": "56a2db7cadb3baf8",
+        "aws": "9ecdcf2e69dfd39e",
+        "operation": "PutItem",
+        "Statements": "",
+        "RequestItems": "",
+        "TableName": "SystemSettings",
+        "BackupName": "",
+        "GlobalTableName": "",
+        "ReplicationGroup": "",
+        "AttributeDefinitions": "",
+        "KeySchema": "",
+        "BackupArn": "",
+        "Key": "",
+        "ExportArn": "",
+        "Statement": "",
+        "TransactStatements": "",
+        "TableArn": "",
+        "S3Bucket": "",
+        "ResourceArn": "",
+        "Item": "",
+        "TargetTableName": "",
+        "Tags": "",
+        "TransactItems": "",
+        "TagKeys": "",
+        "PointInTimeRecoverySpecification": "",
+        "ContributorInsightsAction": "",
+        "ReplicaUpdates": "",
+        "TimeToLiveSpecification": "",
+        "name": "",
+        "x": 680,
+        "y": 460,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "820eb570af33b06a",
+        "type": "function",
+        "z": "56a2db7cadb3baf8",
+        "name": "function 2",
+        "func": "flow.set(\"tiltThreshold\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2bedd20f32a79b05",
+        "type": "function",
+        "z": "56a2db7cadb3baf8",
+        "name": "function 3",
+        "func": "flow.set(\"timeWindow\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1fe433c8d06853a4",
+        "type": "function",
+        "z": "56a2db7cadb3baf8",
+        "name": "function 4",
+        "func": "flow.set(\"int1\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "369e69148c2a6863",
+        "type": "function",
+        "z": "56a2db7cadb3baf8",
+        "name": "function 5",
+        "func": "flow.set(\"int2\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2509a81a4893fc09",
+        "type": "function",
+        "z": "56a2db7cadb3baf8",
+        "name": "function 6",
+        "func": "flow.set(\"int3\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a229eb51574ca8ca",
+        "type": "ui_button",
+        "z": "56a2db7cadb3baf8",
+        "name": "",
+        "group": "8fb6dd55913dfc13",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reset Config",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 540,
+        "wires": [
+            [
+                "ecdd14953512221a"
+            ]
+        ]
+    },
+    {
+        "id": "ecdd14953512221a",
+        "type": "function",
+        "z": "56a2db7cadb3baf8",
+        "name": "function 10",
+        "func": "// Recupera i dati dal flow context\nvar areaId = \"GLOBAL\";\nvar threshold = 5;\nvar window = 10;\nvar h1 = 1;\nvar h2 = 12;\nvar h3 = 24;\n\nmsg.Item = {\n        \"areaId\": { \"S\": String(areaId) },\n        // NOTA: Usa \"N\" per i numeri, ma passali come stringhe. \n        // DynamoDB vuole così per il tipo Number.\n        \"tiltThreshold\": { \"N\": String(threshold) },\n        \"timeWindow\":    { \"N\": String(window) },\n        \"int1\":          { \"N\": String(h1) },\n        \"int2\":          { \"N\": String(h2) },\n        \"int3\":          { \"N\": String(h3) }\n    \n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 540,
+        "wires": [
+            [
+                "833421ce6c1f102d"
+            ]
+        ]
+    },
+    {
+        "id": "8e1925d84b70cbaf",
+        "type": "ui_slider",
+        "z": "56a2db7cadb3baf8",
+        "name": "",
+        "label": "Soglia Tilt",
+        "tooltip": "",
+        "group": "8fb6dd55913dfc13",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "20",
+        "step": 1,
+        "className": "",
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "820eb570af33b06a"
+            ]
+        ]
+    },
+    {
+        "id": "4178a462ad5f90d8",
+        "type": "ui_button",
+        "z": "27aaede8fe1ea182",
+        "name": "",
+        "group": "b7cbb33a214d872e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "561edf7ccfaabf70"
+            ]
+        ]
+    },
+    {
+        "id": "ec5a8fd8e59595a1",
+        "type": "function",
+        "z": "27aaede8fe1ea182",
+        "name": "function 7",
+        "func": "flow.set(\"deviceId\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b03d991d774fea23",
+        "type": "function",
+        "z": "27aaede8fe1ea182",
+        "name": "function 8",
+        "func": "flow.set(\"areaId\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "561edf7ccfaabf70",
+        "type": "function",
+        "z": "27aaede8fe1ea182",
+        "name": "function 9",
+        "func": "// 1. Recupera i valori dalle VARIABILI DI FLUSSO (dove li hai salvati dai form)\nvar id = flow.get(\"deviceId\");\nvar area = flow.get(\"areaId\");\n\n// 2. Controllo di sicurezza: se i campi sono vuoti o indefiniti, ferma tutto e avvisa\nif (!id || id === \"\") {\n    node.error(\"ERRORE: deviceId è vuoto!\");\n    node.status({ fill: \"red\", shape: \"ring\", text: \"deviceId vuoto!\" });\n    return null; // Interrompe il flusso\n}\nif (!area || area === \"\") {\n    node.error(\"ERRORE: areaId è vuoto!\");\n    node.status({ fill: \"red\", shape: \"ring\", text: \"areaId vuoto!\" });\n    return null; // Interrompe il flusso\n}\n\n// 3. Prepara i parametri DIRETTAMENTE SU MSG, non in msg.payload!\nmsg.TableName = \"SensorsRegistry\";\n\nmsg.Item = {\n    \"deviceId\": { \"S\": String(id) },\n    \"areaId\": { \"S\": String(area) }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 240,
+        "wires": [
+            [
+                "b19a334914309014"
+            ]
+        ]
+    },
+    {
+        "id": "6453bc3120932852",
+        "type": "ui_text_input",
+        "z": "27aaede8fe1ea182",
+        "name": "",
+        "label": "deviceId",
+        "tooltip": "",
+        "group": "b7cbb33a214d872e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "ec5a8fd8e59595a1"
+            ]
+        ]
+    },
+    {
+        "id": "81f9d80cb9a59be5",
+        "type": "ui_text_input",
+        "z": "27aaede8fe1ea182",
+        "name": "",
+        "label": "areaId",
+        "tooltip": "",
+        "group": "b7cbb33a214d872e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "b03d991d774fea23"
+            ]
+        ]
+    },
+    {
+        "id": "b19a334914309014",
+        "type": "AWS DynamoDB",
+        "z": "27aaede8fe1ea182",
+        "aws": "9ecdcf2e69dfd39e",
+        "operation": "PutItem",
+        "Statements": "",
+        "RequestItems": "",
+        "TableName": "SensorsRegistry",
+        "BackupName": "",
+        "GlobalTableName": "",
+        "ReplicationGroup": "",
+        "AttributeDefinitions": "",
+        "KeySchema": "",
+        "BackupArn": "",
+        "Key": "",
+        "ExportArn": "",
+        "Statement": "",
+        "TransactStatements": "",
+        "TableArn": "",
+        "S3Bucket": "",
+        "ResourceArn": "",
+        "Item": "",
+        "TargetTableName": "",
+        "Tags": "",
+        "TransactItems": "",
+        "TagKeys": "",
+        "PointInTimeRecoverySpecification": "",
+        "ContributorInsightsAction": "",
+        "ReplicaUpdates": "",
+        "TimeToLiveSpecification": "",
+        "name": "",
+        "x": 560,
+        "y": 240,
+        "wires": [
+            [],
+            [
+                "2020b191e7bde5f0"
+            ]
+        ]
+    },
+    {
+        "id": "2020b191e7bde5f0",
+        "type": "debug",
+        "z": "27aaede8fe1ea182",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "914cc77c63689e61",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-telegrambot": "17.1.2",
+            "node-red-dashboard": "3.6.6",
+            "node-red-contrib-aws": "0.7.0"
+        }
+    }
+]
