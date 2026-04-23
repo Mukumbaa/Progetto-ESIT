@@ -265,7 +265,7 @@
         ]
     },
     {
-        "id": "fc34cf676740a88d",
+        "id": "86cdb9fbfabdcd4c",
         "type": "tab",
         "label": "Soglie e Intervalli",
         "disabled": false,
@@ -273,9 +273,9 @@
         "env": []
     },
     {
-        "id": "78b39b7b452c4623",
+        "id": "1cd9916978afbd50",
         "type": "ui_numeric",
-        "z": "fc34cf676740a88d",
+        "z": "86cdb9fbfabdcd4c",
         "name": "",
         "label": "Finestra Tempo (sec)",
         "tooltip": "",
@@ -288,22 +288,22 @@
         "topic": "topic",
         "topicType": "msg",
         "format": "{{value}}",
-        "min": 0,
+        "min": "10",
         "max": "60",
         "step": 1,
         "className": "",
-        "x": 360,
+        "x": 380,
         "y": 180,
         "wires": [
             [
-                "25419588b2a3b8b5"
+                "5595c5e34dd0403b"
             ]
         ]
     },
     {
-        "id": "47ef8f59b58da7cf",
+        "id": "e7c90732b541273c",
         "type": "ui_numeric",
-        "z": "fc34cf676740a88d",
+        "z": "86cdb9fbfabdcd4c",
         "name": "",
         "label": "Intervallo 1",
         "tooltip": "",
@@ -317,21 +317,21 @@
         "topicType": "msg",
         "format": "{{value}}",
         "min": 0,
-        "max": 10,
+        "max": "48",
         "step": 1,
         "className": "",
-        "x": 330,
+        "x": 350,
         "y": 240,
         "wires": [
             [
-                "9a3a024c3198118c"
+                "fc2c158d9737e19e"
             ]
         ]
     },
     {
-        "id": "6cb0994b5e80276c",
+        "id": "4b7e6e4bc9f7de34",
         "type": "ui_numeric",
-        "z": "fc34cf676740a88d",
+        "z": "86cdb9fbfabdcd4c",
         "name": "",
         "label": "Intervallo 3",
         "tooltip": "",
@@ -345,21 +345,21 @@
         "topicType": "msg",
         "format": "{{value}}",
         "min": 0,
-        "max": 10,
+        "max": "48",
         "step": 1,
         "className": "",
-        "x": 330,
+        "x": 350,
         "y": 360,
         "wires": [
             [
-                "10cc624f6b78a522"
+                "5484b93b9316c2f4"
             ]
         ]
     },
     {
-        "id": "0a4210753a229ecd",
+        "id": "82f3159189d31657",
         "type": "ui_numeric",
-        "z": "fc34cf676740a88d",
+        "z": "86cdb9fbfabdcd4c",
         "name": "",
         "label": "Intervallo 2",
         "tooltip": "",
@@ -373,21 +373,21 @@
         "topicType": "msg",
         "format": "{{value}}",
         "min": 0,
-        "max": 10,
+        "max": "48",
         "step": 1,
         "className": "",
-        "x": 330,
+        "x": 350,
         "y": 300,
         "wires": [
             [
-                "52f41b06ca5ea3dd"
+                "90a642e9c96eec90"
             ]
         ]
     },
     {
-        "id": "6b4b3e690456f946",
+        "id": "a49093602258ad4a",
         "type": "ui_button",
-        "z": "fc34cf676740a88d",
+        "z": "86cdb9fbfabdcd4c",
         "name": "",
         "group": "8fb6dd55913dfc13",
         "order": 7,
@@ -404,18 +404,18 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 360,
+        "x": 380,
         "y": 460,
         "wires": [
             [
-                "b327e0d862f34583"
+                "ac959dd7fc9b4a97"
             ]
         ]
     },
     {
-        "id": "b327e0d862f34583",
+        "id": "ac959dd7fc9b4a97",
         "type": "function",
-        "z": "fc34cf676740a88d",
+        "z": "86cdb9fbfabdcd4c",
         "name": "function 11",
         "func": "// Recupera i dati dal flow context\nvar areaId = flow.get(\"areaId\") || \"GLOBAL\";\nvar threshold = flow.get(\"tiltThreshold\") || 5;\nvar window = flow.get(\"timeWindow\") || 10;\nvar h1 = flow.get(\"int1\") || 1;\nvar h2 = flow.get(\"int2\") || 12;\nvar h3 = flow.get(\"int3\") || 24;\n\nmsg.Item = {\n        \"areaId\": { \"S\": String(areaId) },\n        // NOTA: Usa \"N\" per i numeri, ma passali come stringhe. \n        // DynamoDB vuole così per il tipo Number.\n        \"tiltThreshold\": { \"N\": String(threshold) },\n        \"timeWindow\":    { \"N\": String(window) },\n        \"int1\":          { \"N\": String(h1) },\n        \"int2\":          { \"N\": String(h2) },\n        \"int3\":          { \"N\": String(h3) }\n    \n};\n\nreturn msg;",
         "outputs": 1,
@@ -424,18 +424,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
+        "x": 640,
         "y": 460,
         "wires": [
             [
-                "3633d7972b317ab5"
+                "487162a8af562de7"
             ]
         ]
     },
     {
-        "id": "3633d7972b317ab5",
+        "id": "487162a8af562de7",
         "type": "AWS DynamoDB",
-        "z": "fc34cf676740a88d",
+        "z": "86cdb9fbfabdcd4c",
         "aws": "",
         "operation": "PutItem",
         "Statements": "",
@@ -464,7 +464,7 @@
         "ReplicaUpdates": "",
         "TimeToLiveSpecification": "",
         "name": "",
-        "x": 880,
+        "x": 900,
         "y": 460,
         "wires": [
             [],
@@ -472,9 +472,9 @@
         ]
     },
     {
-        "id": "958aeb63f907a02a",
+        "id": "9c5d3276e9501689",
         "type": "function",
-        "z": "fc34cf676740a88d",
+        "z": "86cdb9fbfabdcd4c",
         "name": "function 12",
         "func": "flow.set(\"tiltThreshold\", msg.payload);\nreturn null;",
         "outputs": 1,
@@ -483,16 +483,16 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
+        "x": 600,
         "y": 120,
         "wires": [
             []
         ]
     },
     {
-        "id": "25419588b2a3b8b5",
+        "id": "5595c5e34dd0403b",
         "type": "function",
-        "z": "fc34cf676740a88d",
+        "z": "86cdb9fbfabdcd4c",
         "name": "function 13",
         "func": "flow.set(\"timeWindow\", msg.payload);\nreturn null;",
         "outputs": 1,
@@ -501,16 +501,16 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
+        "x": 600,
         "y": 180,
         "wires": [
             []
         ]
     },
     {
-        "id": "9a3a024c3198118c",
+        "id": "fc2c158d9737e19e",
         "type": "function",
-        "z": "fc34cf676740a88d",
+        "z": "86cdb9fbfabdcd4c",
         "name": "function 14",
         "func": "flow.set(\"int1\", msg.payload);\nreturn null;",
         "outputs": 1,
@@ -519,16 +519,16 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
+        "x": 600,
         "y": 240,
         "wires": [
             []
         ]
     },
     {
-        "id": "52f41b06ca5ea3dd",
+        "id": "90a642e9c96eec90",
         "type": "function",
-        "z": "fc34cf676740a88d",
+        "z": "86cdb9fbfabdcd4c",
         "name": "function 15",
         "func": "flow.set(\"int2\", msg.payload);\nreturn null;",
         "outputs": 1,
@@ -537,16 +537,16 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
+        "x": 600,
         "y": 300,
         "wires": [
             []
         ]
     },
     {
-        "id": "10cc624f6b78a522",
+        "id": "5484b93b9316c2f4",
         "type": "function",
-        "z": "fc34cf676740a88d",
+        "z": "86cdb9fbfabdcd4c",
         "name": "function 16",
         "func": "flow.set(\"int3\", msg.payload);\nreturn null;",
         "outputs": 1,
@@ -555,16 +555,16 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
+        "x": 600,
         "y": 360,
         "wires": [
             []
         ]
     },
     {
-        "id": "491fda0fceeec950",
+        "id": "6e1bce06c7c524c3",
         "type": "ui_button",
-        "z": "fc34cf676740a88d",
+        "z": "86cdb9fbfabdcd4c",
         "name": "",
         "group": "8fb6dd55913dfc13",
         "order": 1,
@@ -581,18 +581,18 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 330,
+        "x": 350,
         "y": 540,
         "wires": [
             [
-                "7c157525f73e89f9"
+                "0d1b26bbc258415d"
             ]
         ]
     },
     {
-        "id": "7c157525f73e89f9",
+        "id": "0d1b26bbc258415d",
         "type": "function",
-        "z": "fc34cf676740a88d",
+        "z": "86cdb9fbfabdcd4c",
         "name": "function 17",
         "func": "// Recupera i dati dal flow context\nvar areaId = \"GLOBAL\";\nvar threshold = 5;\nvar window = 10;\nvar h1 = 1;\nvar h2 = 12;\nvar h3 = 24;\n\nmsg.Item = {\n        \"areaId\": { \"S\": String(areaId) },\n        // NOTA: Usa \"N\" per i numeri, ma passali come stringhe. \n        // DynamoDB vuole così per il tipo Number.\n        \"tiltThreshold\": { \"N\": String(threshold) },\n        \"timeWindow\":    { \"N\": String(window) },\n        \"int1\":          { \"N\": String(h1) },\n        \"int2\":          { \"N\": String(h2) },\n        \"int3\":          { \"N\": String(h3) }\n    \n};\n\nreturn msg;",
         "outputs": 1,
@@ -601,40 +601,69 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
+        "x": 650,
         "y": 540,
         "wires": [
             [
-                "3633d7972b317ab5"
+                "487162a8af562de7"
             ]
         ]
     },
     {
-        "id": "ddee2b58d31bc3ea",
-        "type": "ui_slider",
-        "z": "fc34cf676740a88d",
+        "id": "a9baaf30125fe91d",
+        "type": "ui_numeric",
+        "z": "86cdb9fbfabdcd4c",
         "name": "",
         "label": "Soglia Tilt",
         "tooltip": "",
         "group": "8fb6dd55913dfc13",
-        "order": 6,
+        "order": 2,
         "width": 0,
         "height": 0,
+        "wrap": false,
         "passthru": true,
-        "outs": "all",
         "topic": "topic",
         "topicType": "msg",
-        "min": 0,
+        "format": "{{value}}",
+        "min": "5",
         "max": "20",
         "step": 1,
         "className": "",
-        "x": 320,
-        "y": 120,
+        "x": 380,
+        "y": 60,
         "wires": [
             [
-                "958aeb63f907a02a"
+                "9c5d3276e9501689"
             ]
         ]
+    },
+    {
+        "id": "8fb6dd55913dfc13",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "759a448185a4a9f3",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "759a448185a4a9f3",
+        "type": "ui_tab",
+        "name": "Configurazione",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7c15924de4bbdfd3",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-contrib-aws": "0.7.0"
+        }
     },
     {
         "id": "5626651e3655e789",
